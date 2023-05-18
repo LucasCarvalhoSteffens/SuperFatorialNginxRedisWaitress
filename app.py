@@ -49,5 +49,10 @@ def obter_super_fatorial(numero):
     resultado = calcular_super_fatorial(numero)
     return jsonify({'numero': numero, 'super_fatorial': resultado})
 
+@app.route('/fatorial/<int:numero>', methods=['GET'])
+def obter_fatorial(numero):
+    resultado = calcular_fatorial(numero)
+    return jsonify({'numero': numero, 'super_fatorial': resultado})
+
 if __name__ == '__main__':
     app.run(debug=True)
